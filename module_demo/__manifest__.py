@@ -24,6 +24,7 @@
 
     # always loaded
     'data': [
+        'views/persona_view.xml',
     ],
     'installable':True,
 }
