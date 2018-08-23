@@ -38,3 +38,20 @@ class Persona(models.Model): #paquete.clase
 		required=True,
 		default="otro"
 		)
+
+	grado_estudio_id=fields.Many2one( #campo para relacion
+		'personas.grados_estudio', #nombre del modelo con el que se relaciona
+		string="Grado máximo de estudios",
+		required=True,
+		)
+
+	dominios_email_ids=fields.Many2many(
+		'personas.nombre_cuentas_email',
+		string="Dominios de email usados"
+		)
+
+	autos_ids=fields.One2many(
+		'personas.autos',#modelo al que se hace referencia
+		'persona_id', #un campo de regreso
+		string="Autos"
+		)
