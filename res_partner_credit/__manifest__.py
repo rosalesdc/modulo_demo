@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Modulo de muestra",
+    'name': "Agrega CREDIT a contactos",
 
     'summary': """
     """,
 
     'description': """
-        
+        Modulo creado como practica Luis Angel
     """,
 
     'author': "Soluciones4G",
@@ -20,16 +20,12 @@
     # any module necessary for this one to work correctly
     'depends': [
         'base',
-        'stock',
+        'contacts' # es el nombre de la aplicacion de la que extendemos
     ],
 
     # always loaded
     'data': [
-        'views/persona_view.xml',
-        'data/personas_demo.xml',
-        'views/product_inherited_view.xml',
-        'views/persona_lab.xml',
+    'views/res_partner_credit.xml'
     ],
     'installable':True,
-    'auto_install':False,
 }

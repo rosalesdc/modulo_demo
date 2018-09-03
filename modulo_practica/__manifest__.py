@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Modulo de practica",
+    'name': "Agrega RFC a contactos",
 
     'summary': """
     """,
@@ -24,7 +24,6 @@
 
     # always loaded
     'data': [
-        'views/refaccion_view.xml',
     ],
     'installable':True,
 }

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Modulo de muestra",
+    'name': "Modulo para borrar",
 
     'summary': """
     """,
@@ -27,8 +27,6 @@
     'data': [
         'views/persona_view.xml',
         'data/personas_demo.xml',
-        'views/product_inherited_view.xml',
-        'views/persona_lab.xml',
     ],
     'installable':True,
     'auto_install':False,
