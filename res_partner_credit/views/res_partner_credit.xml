@@ -12,8 +12,9 @@ and open the template in the editor.
             <field name="inherit_id" ref="base.view_partner_form"></field>
             <field name="arch" type="xml">
                 <xpath expr="//form/sheet/notebook/page[@name='sales_purchases']/group/group[1]/field[@name='user_id']" position="after">
-                    <field name="credit"></field>
-                    <field name="credit_limit"></field>
+                    
+                    <field name="credit_limit"/>
+<!--                    <field name="credit"/>-->
                 </xpath>
             </field>
         </record>
