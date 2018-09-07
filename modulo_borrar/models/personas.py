@@ -39,4 +39,7 @@ class Persona(models.Model): #paquete.clase
                             required=True,
                             default="otro"
                             )
+    fecha_registro = fields.Date(
+                    string="Fecha de registro"
+                                 )
 

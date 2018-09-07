@@ -25,7 +25,7 @@
                             <group>
                                 <field name="informacion_adicional"></field>
                                 <field name="sexo"></field>
-							
+                                <field name="fecha_registro"></field>			
                             </group>
                         </group>
                     </sheet>
@@ -37,33 +37,53 @@
             <field name="name">persona.tree.view</field>
             <field name="model">persona.main_data</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree string="vista calendario"
+                >
                     <field name="name"></field>
                     <field name="edad"></field>
                     <field name="es_casado"></field>
                     <field name="sexo"></field>
+                    <field name="fecha_registro"></field>
+                </tree>
+            </field>
+        </record>
+        <record id="persona_tree_view" model="ir.ui.view">
+            <field name="name">persona.tree.view</field>
+            <field name="model">persona.main_data</field>
+            <field name="arch" type="xml">
+                <tree string="vista calendario"
+                >
+                    <field name="name"></field>
+                    <field name="edad"></field>
+                    <field name="es_casado"></field>
+                    <field name="sexo"></field>
+                    <field name="fecha_registro"></field>
                 </tree>
             </field>
         </record>
 
-        <record id="persona_search_view" model="ir.ui.view">
-            <field name="name">persona.search.view</field>
+        <record id="persona_calendar_view" model="ir.ui.view">
+            <field name="name">persona.calendar.view</field>
             <field name="model">persona.main_data</field>
             <field name="arch" type="xml">
-                <search>
-                    <field name="name" />
-                    <field name="edad" />
-                    <field name="es_casado" />
-                    <field name="sexo" />
-                </search>
+                <calendar string="vista calendario" date_start="fecha_registro"
+                >
+                    <field name="name"></field>
+                    <field name="edad"></field>
+                    <field name="es_casado"></field>
+                    <field name="sexo"></field>
+                    <field name="fecha_registro"></field>
+                </calendar>
             </field>
         </record>
+        
         <record id="persona_action_window" model="ir.actions.act_window">
             <field name="name">persona</field>
             <field name="res_model">persona.main_data</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">calendar,form,tree</field>
         </record>
+        
         <menuitem
             id="master_data_training"
             name="Modulo para borrar"
